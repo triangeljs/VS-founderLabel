@@ -1,0 +1,138 @@
+{
+	"name": "founder-cms-label",
+	"displayName": "founder-cms-label",
+	"description": "方正翔宇Visual Studio Codec插件",
+	"version": "0.1.1",
+	"publisher": "CIIC",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": ["Other"],
+	"activationEvents": ["*"],
+	"main": "./extension",
+	"contributes": {
+		"commands": [{
+			"command": "founder.singleNode",
+			"title": "添加方正单个栏目",
+			"category": "ciic"
+		},{
+			"command": "founder.advTitleList",
+			"title": "添加方正标题列表",
+			"category": "ciic"
+		},{
+			"command": "founder.advTitleListPage",
+			"title": "添加方正分页标题列表",
+			"category": "ciic"
+		},{
+			"command": "founder.advContent",
+			"title": "添加方正文章内容",
+			"category": "ciic"
+		},{
+			"command": "founder.editAttr",
+			"title": "编辑方正文章属性",
+			"category": "ciic_attr"
+		},{
+			"command": "founder.editNodeid",
+			"title": "编辑方正栏目ID",
+			"category": "ciic_attr"
+		},{
+			"command": "founder.editDayspan",
+			"title": "编辑标题列表条数或分页标题列表页数",
+			"category": "ciic_attr"
+		},{
+			"command": "founder.editComstring",
+			"title": "编辑Html片段代码",
+			"category": "ciic_attr"
+		},{
+			"command": "founder.htmlEncode",
+			"title": "方正标签编码",
+			"category": "ciic_code"
+		},{
+			"command": "founder.htmlDecode",
+			"title": "方正标签解码",
+			"category": "ciic_code"
+		},{
+			"command": "founder.htmlInsertAttr",
+			"title": "方正标签关键字段",
+			"category": "ciic_code"
+		}],
+		"menus": {
+			"editor/context": [{
+				"when": "resourceLangId == html",
+				"command": "founder.singleNode",
+				"group": "ciic"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.advTitleList",
+				"group": "ciic"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.advTitleListPage",
+				"group": "ciic"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.advContent",
+				"group": "ciic"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.editAttr",
+				"group": "ciic_attr"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.editNodeid",
+				"group": "ciic_attr"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.editDayspan",
+				"group": "ciic_attr"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.editComstring",
+				"group": "ciic_attr"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.htmlEncode",
+				"group": "ciic_code"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.htmlDecode",
+				"group": "ciic_code"
+			},{
+				"when": "resourceLangId == html",
+				"command": "founder.htmlInsertAttr",
+				"group": "ciic_code"
+			}]
+		},
+		"keybindings": [{
+				"command": "founder.singleNode",
+				"key": "ctrl+1",
+				"when": "editorTextFocus"
+			},{
+				"command": "founder.advTitleList",
+				"key": "ctrl+2",
+				"when": "editorTextFocus"
+			},{
+				"command": "founder.advTitleListPage",
+				"key": "ctrl+3",
+				"when": "editorTextFocus"
+			},{
+				"command": "founder.advContent",
+				"key": "ctrl+4",
+				"when": "editorTextFocus"
+			},{
+				"command": "founder.htmlEncode",
+				"key": "ctrl+E",
+				"when": "editorTextFocus"
+			},{
+				"command": "founder.htmlDecode",
+				"key": "ctrl+D",
+				"when": "editorTextFocus"
+			}]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.0"
+	}
+}
